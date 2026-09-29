@@ -101,5 +101,6 @@ export type EducationEntry = {
   end: string;
   location?: string;
   details?: string[];
+  honors?: string[];
   verify?: string[];
 };

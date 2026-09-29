@@ -19,6 +19,11 @@ export function EducationBrief() {
               </span>
             </div>
             {ed.details && <p className="mt-0.5 text-[13.5px] text-muted">{ed.details.join(" · ")}</p>}
+            {ed.honors && (
+              <p className="mt-0.5 text-[13.5px] text-muted">
+                <span className="text-ink-2">Honors:</span> {ed.honors.join("; ")}
+              </p>
+            )}
             <Verify items={ed.verify} />
           </li>
         ))}
