@@ -9,28 +9,27 @@ import type { EarlierResearch, Project } from "./types";
 export const projects: Project[] = [
   {
     slug: "clarifying-questions-llm-recommenders",
-    title: "When Should an LLM Recommender Ask?",
+    title: "LLM Recommendations and the Decision Value of Missing Preferences",
     description:
-      "An exact-oracle benchmark for deciding when a clarifying question in LLM-based conversational recommendation could actually change the optimal recommendation.",
+      "A benchmark with an exact oracle for whether a consumer's undecided preferences can change the recommendation, used to test whether LLM recommenders ask about missing preferences when it matters.",
     researchQuestion:
-      "When is a clarifying question worth asking? For a given request, can a clarifying question change the optimal recommendation, and do LLM recommenders ask only when it can?",
+      "When a consumer leaves a preference unstated, do LLM recommenders raise it because the recommendation depends on it, or only because the consumer mentioned it?",
     methods: [
-      "Exact-oracle benchmark that determines, for each request, whether a clarifying question could change the optimal recommendation",
-      "Evaluation of three frontier LLMs in decision-determined and request-dependent cases",
-      "Direct probing of whether models recognize that a question is unnecessary",
-      "Prompt intervention: stating the decision criterion explicitly",
-      "Ongoing: extending the oracle to request-dependent clarification on a real-world hotel catalog",
+      "Benchmark of 72 hotel-choice scenarios across 61 cities, built from HotelRec ratings",
+      "Exact oracle for whether a consumer's undecided preferences can change the recommendation",
+      "Paired requests (\u201cbook one\u201d vs. \u201cthe best three\u201d) that make the same missing preference decision-relevant in one condition but not the other",
+      "2,160 queries to three frontier LLMs (GPT-5.6 Luna, Gemini 3.6 Flash, Claude Sonnet 5)",
+      "Response types coded by three LLM annotators from providers outside the study, validated against blind human coding (\u03ba = 0.98, n = 100)",
+      "95% scenario-cluster bootstrap intervals",
     ],
-    contribution: [
-      "First author. Designed the exact-oracle benchmark and ran the evaluation across three frontier LLMs.",
-    ],
-    status: "To be submitted to ECIR 2027 (short paper track)",
+    contribution: ["First author. Designed the benchmark and oracle, ran the evaluation, and analyzed the results."],
+    status: "Under review",
     affiliation: "Northwestern University",
     collaborators: ["Edward C. Malthouse (Northwestern University)"],
     outcomes: [
-      "Across three frontier LLMs, 77–93% of the clarifying questions asked in decision-determined cases could not change the optimal recommendation.",
-      "The models recognized that these questions were unnecessary when asked directly.",
-      "Stating the decision criterion in the prompt largely eliminated these questions.",
+      "LLMs raised missing preferences mainly when consumers mentioned them, not when the recommendation depended on them.",
+      "70\u201393% of responses addressed open preferences stated as undecided, but only 10\u201327% did when the same preferences went unmentioned.",
+      "With complete preferences, the same models chose correctly 97\u2013100% of the time.",
     ],
     publications: ["lee2027clarification"],
   },
@@ -48,10 +47,10 @@ export const projects: Project[] = [
       "Coding of 17,821 LLM justifications into eight brand-association types",
     ],
     contribution: [
-      "Second author. Contributed to research framing and experimental design.",
-      "Ran the evaluation experiments, organized and analyzed results, and co-wrote parts of the manuscripts.",
+      "Second author. Designed and ran the evaluation experiments and analyzed the results.",
+      "Contributed to the research framing and co-wrote the manuscripts.",
     ],
-    status: "arXiv preprint, 2026; manuscripts under review and in preparation",
+    status: "arXiv preprint, 2026; related manuscripts under review",
     period: "Jan 2026 – Present",
     affiliation: "Northwestern University",
     collaborators: [
@@ -61,9 +60,9 @@ export const projects: Project[] = [
       "Xueyan Feng",
     ],
     outcomes: [
-      "Category-only queries omit many established brands.",
-      "Recommendation prominence tracks search interest and online brand conversation more than conventional brand popularity.",
-      "Needs-based queries change which brands are retrieved, and NDCG need-matching varies widely across positioning dimensions.",
+      "Category-only queries omit established brands (e.g., Craftsman, BRP@5 = 0%).",
+      "Search interest is the most consistent predictor of recommendation prominence.",
+      "Needs-based NDCG varies widely across brand-positioning dimensions.",
       "In the \u201cmachine brand image,\u201d price tier is the strongest marketplace correlate, while advertising spending shows no association.",
     ],
     links: [

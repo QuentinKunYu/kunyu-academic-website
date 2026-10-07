@@ -5,16 +5,21 @@ import type { Publication } from "./types";
  *
  * Only list work that is publicly verifiable. Preprints must keep
  * `status: "preprint"` until formally accepted.
+ *
+ * Papers under double-anonymous review are listed as "Manuscript" without
+ * naming the venue (common practice; see each entry's `submittedTo` comment).
+ * Add the venue once a paper is accepted.
  */
 export const publications: Publication[] = [
   {
     id: "lee2027clarification",
     title:
-      "When Is a Clarifying Question Worth Asking? Request-Dependent Clarification in LLM-Based Conversational Recommendation",
+      "Evaluating Whether LLM Recommendations Respond to the Decision Value of Missing Preferences",
     authors: ["Kun-Yu Lee", "Edward C. Malthouse"],
     year: 2026,
-    venue: "To be submitted to the European Conference on Information Retrieval (ECIR 2027), short paper track",
-    status: "in preparation",
+    // submittedTo: ECIR 2027 short paper track (Oct 2026); notification 7 Dec 2026
+    venue: "Manuscript",
+    status: "submitted",
     selected: true,
     relatedProjects: ["clarifying-questions-llm-recommenders"],
   },
@@ -31,7 +36,8 @@ export const publications: Publication[] = [
     ],
     year: 2026,
     venue: "arXiv preprint",
-    note: "A conference version, \u201cEvaluating Brand Retrieval and Ranking in Open-Ended LLM Recommendations,\u201d is to be submitted to ECIR 2027.",
+    // submittedTo: shorter version under review at ECIR 2027 (full papers); notification 7 Dec 2026
+    note: "A shorter version is under review.",
     status: "preprint",
     selected: true,
     arxivId: "2609.16304",
@@ -65,17 +71,19 @@ export const publications: Publication[] = [
       "The Silent Gatekeeper: A Framework for Measuring, Explaining, and Diagnosing Brand Visibility in LLM Recommendations",
     authors: ["Edward C. Malthouse", "Kun-Yu Lee", "Jing Yang", "Sanchary Pal", "Xueyan Feng"],
     year: 2026,
-    venue: "Under review at the Journal of Advertising Research (JAR)",
+    // submittedTo: Journal of Advertising Research
+    venue: "Manuscript",
     status: "submitted",
     relatedProjects: ["llm-brand-retrieval"],
   },
   {
     id: "machine-brand-image-aaa",
     title: "The Machine Brand Image: Evaluating LLM Recommendations Across Prompts and Models",
-    authors: ["Jing Yang", "Kun-Yu Lee", "et al."],
+    authors: ["Jing Yang", "Kun-Yu Lee", "Sanchary Pal", "Xueyan Feng", "Edward C. Malthouse"],
     year: 2026,
-    venue: "To be submitted to the American Academy of Advertising (AAA) 2027 Conference",
-    status: "in preparation",
+    // submittedTo: American Academy of Advertising (AAA) 2027 Conference
+    venue: "Manuscript",
+    status: "submitted",
     relatedProjects: ["llm-brand-retrieval"],
   },
 ];

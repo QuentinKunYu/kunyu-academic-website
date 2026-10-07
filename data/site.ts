@@ -32,7 +32,7 @@ export const site = {
   /** Hero paragraphs. Keep factual and consistent with the CV. */
   intro: [
     "I work with Edward C. Malthouse (Northwestern University) and Jing Yang (Boston University) on evaluating LLM-based recommender systems.",
-    "My research asks how LLM-based recommenders make decisions under uncertainty: when they should ask a clarifying question, what they surface, and whether their behavior can be audited.",
+    "My research asks how LLM-based recommenders decide under uncertainty: when a missing preference is worth a clarifying question, which options they retrieve and rank, and whether this behavior can be reproducibly audited.",
   ],
 
   applying: "I am applying to PhD programs for Fall 2027.",

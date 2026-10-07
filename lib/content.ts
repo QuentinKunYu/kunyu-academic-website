@@ -31,7 +31,7 @@ export function groupPublications(pubs: Publication[]) {
   }
   const groups = [...buckets.entries()].map(([label, items]) => ({ label, items }));
   if (manuscripts.length > 0) {
-    groups.push({ label: "Under review & in preparation", items: manuscripts });
+    groups.push({ label: "Under review", items: manuscripts });
   }
   return groups;
 }

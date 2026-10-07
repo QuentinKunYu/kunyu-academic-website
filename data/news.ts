@@ -14,8 +14,4 @@ export const news: NewsItem[] = [
     text: "Preprint on evaluating brand retrieval and ranking in LLM recommendations is now on arXiv.",
     link: { label: "arXiv", href: "https://arxiv.org/abs/2609.16304" },
   },
-  {
-    date: "Sep 2026",
-    text: "Submitted “The Silent Gatekeeper” to the Journal of Advertising Research.",
-  },
 ];

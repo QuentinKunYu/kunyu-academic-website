@@ -16,7 +16,7 @@ export const education: EducationEntry[] = [
     start: "Aug 2021",
     end: "Dec 2024",
     location: "Lincoln, NE",
-    details: ["Minor in Mathematics", "GPA 3.9 / 4.0"],
-    honors: ["Dean's List (2021–2024)"],
+    details: ["Minor in Mathematics", "GPA 3.91 / 4.00"],
+    honors: ["B.S. with High Distinction", "B.A. with Distinction", "Dean's List (2021–2024)"],
   },
 ];
