@@ -22,6 +22,8 @@ export function Hero() {
             <a href={site.affiliationUrl} className="text-accent hover:underline" target="_blank" rel="noopener noreferrer">
               {site.affiliation}
             </a>
+            <br />
+            {site.role}
           </p>
 
           <div className="mt-6 max-w-[64ch] space-y-4 text-[16.5px] leading-[1.7] text-ink-2">

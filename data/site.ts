@@ -13,6 +13,8 @@ export const site = {
     "Kun-Yu Lee is a Master's student in Machine Learning and Data Science at Northwestern University researching how LLM-based recommender systems make decisions under uncertainty: when they should ask, what they surface, and whether their behavior can be audited.",
 
   position: "Master's Student in Machine Learning & Data Science",
+  /** Second line under the name. */
+  role: "Graduate Research Assistant, Northwestern University (Jan 2026 – Present)",
   affiliation: "Northwestern University",
   affiliationUrl: "https://www.northwestern.edu",
   location: "Evanston, IL",
